@@ -24,7 +24,8 @@ const buildMessage = (sale: any) => (
 	.setTitle(sale.asset.name + ' sold!')
 	.setURL(sale.asset.permalink)
 	// .setAuthor('OpenSea Bot', 'https://files.readme.io/566c72b-opensea-logomark-full-colored.png', 'https://github.com/sbauch/opensea-discord-bot')
-	.setThumbnail(sale.asset.collection.image_url)
+  // .setThumbnail(sale.asset.collection.image_url)
+	.setThumbnail('https://uasis.s3.amazonaws.com/ProjectUasis.png')
 	.addFields(
 		{ name: 'Name', value: sale.asset.name },
 		{ name: 'Amount', value: `${ethers.utils.formatEther(sale.total_price || '0')}${ethers.constants.EtherSymbol}`},
